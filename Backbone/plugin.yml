@@ -1,0 +1,26 @@
+name: Backbone
+version: 7.2
+main: me.firebreath15.backbone.main
+commands:
+  bb:
+    description: Backbone
+    usage: /bb
+    permission: backbone.use
+    permission-message: No Permission!
+permissions:
+  backbone.use:
+    default: true
+  backbone.rspawn:
+    default: op
+  backbone.bspawn:
+    default: op
+  backbone.setreload:
+    default: op
+  backbone.setend:
+    default: op
+  backbone.place:
+    default: op
+  backbone.break:
+    default: op
+  backbone.sign:
+    default: op
