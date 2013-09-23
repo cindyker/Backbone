@@ -213,6 +213,7 @@ public class coreCode {
 					metattt.setColor(Color.RED);
 					boot.setItemMeta(metattt);
 					guy.getInventory().setBoots(boot);
+					
 				}else{
 					Player guy = (Player)p;
 					double x = plugin.getConfig().getDouble("bluespawn1.x");

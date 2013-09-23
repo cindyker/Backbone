@@ -1,5 +1,5 @@
 name: Backbone
-version: 7.2
+version: 7.2.1
 main: me.firebreath15.backbone.main
 commands:
   bb:

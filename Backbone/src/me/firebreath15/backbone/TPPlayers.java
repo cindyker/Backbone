@@ -5,7 +5,6 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 public class TPPlayers {
@@ -130,8 +129,6 @@ public class TPPlayers {
 			World w = plugin.getServer().getWorld(wn);
 			Location l = new Location(w,x,y,z);
 			p.teleport(l);
-			Inventory inv = p.getInventory();
-			inv.clear();
 			p.setLevel(0);	
 			p.setFoodLevel(20);
 			p.setHealth(20);
@@ -146,5 +143,7 @@ public class TPPlayers {
 		p.getInventory().setChestplate(air);
 		p.getInventory().setLeggings(air);
 		p.getInventory().setBoots(air);
+		
+		p.getInventory().clear();
 	}
 }

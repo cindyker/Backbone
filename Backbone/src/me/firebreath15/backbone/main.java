@@ -4,9 +4,9 @@ import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
-import org.bukkit.command.*;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -127,8 +127,7 @@ public class main extends JavaPlugin{
 								World w = this.getServer().getWorld(wn);
 								Location l = new Location(w,x,y,z);
 								player.teleport(l);
-								Inventory inv = player.getInventory();
-								inv.clear();
+								player.getInventory().clear();
 								player.setLevel(0);	
 								player.setFoodLevel(20);
 								player.setHealth(20);
@@ -321,6 +320,8 @@ public class main extends JavaPlugin{
 							sc.goShopping((Player)sender, args[1]);
 						}
 						if(args[0].equalsIgnoreCase("join")){
+							Player p = (Player)sender;
+							p.getInventory().clear();
 							coreCode cc = new coreCode(this);
 							cc.joinGame((Player)sender, args[1]);
 						}
