@@ -1,5 +1,6 @@
 package me.firebreath15.backbone;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Sign;
@@ -61,6 +62,16 @@ public class joinSigns implements Listener{
 					p.getInventory().clear();
 					coreCode cc = new coreCode(plugin);
 					cc.joinGame(p, an);
+					
+					ISCOREAPI api = new ISCOREAPI();
+					
+					api.createObjective("Arena_"+an, "Backbone");
+					api.createTeam("Player");
+					api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), 0);
+					api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), 0);
+					api.addPlayerToTeam("Player", p);
+					api.refreshPlayerScoreboard(p);
+					
 				}
 			}
 		}

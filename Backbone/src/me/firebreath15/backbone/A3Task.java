@@ -18,20 +18,23 @@ public class A3Task  extends BukkitRunnable{
 		
 		TPPlayers tp = new TPPlayers(plugin);
 		
-		if(rp > bp){
-			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"Red Team won the game in arena 3!");
-			//plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.YELLOW+"The game is now over. All players please "+ChatColor.LIGHT_PURPLE+"/leave");
-			tp.TeleportPlayersToBackboneSpawn();
-		}
-		if(bp > rp){
-			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.BLUE+"Blue Team won the game in arena 3!");
-			//plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.YELLOW+"The game is now over. All players please "+ChatColor.LIGHT_PURPLE+"/leave");
-			tp.TeleportPlayersToBackboneSpawn();
-		}
-		if(bp == rp){
-			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.DARK_GREEN+"The game in arena 3 ended in a tie.");
-			//plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.YELLOW+"The game is now over. All players please "+ChatColor.LIGHT_PURPLE+"/leave");
-			tp.TeleportPlayersToBackboneSpawn();
+		if(plugin.getConfig().getInt("rplayers3") >= 1){
+		
+			if(rp > bp){
+				plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"Red Team won the game in arena 3!");
+				//plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.YELLOW+"The game is now over. All players please "+ChatColor.LIGHT_PURPLE+"/leave");
+				tp.TeleportPlayersToBackboneSpawn();
+			}
+			if(bp > rp){
+				plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.BLUE+"Blue Team won the game in arena 3!");
+				//plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.YELLOW+"The game is now over. All players please "+ChatColor.LIGHT_PURPLE+"/leave");
+				tp.TeleportPlayersToBackboneSpawn();
+			}
+			if(bp == rp){
+				plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.DARK_GREEN+"The game in arena 3 ended in a tie.");
+				//plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.YELLOW+"The game is now over. All players please "+ChatColor.LIGHT_PURPLE+"/leave");
+				tp.TeleportPlayersToBackboneSpawn();
+			}
 		}
 		plugin.getConfig().set("rpoints3", 0);
 		plugin.getConfig().set("bpoints3", 0);

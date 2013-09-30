@@ -1,5 +1,6 @@
 package me.firebreath15.backbone;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -11,6 +12,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class main extends JavaPlugin{
+	
+	ISCOREAPI api;
 	
 	public void onEnable(){		
 		getServer().getPluginManager().registerEvents(new BlazeRod(this), this);
@@ -74,6 +77,8 @@ public class main extends JavaPlugin{
 		this.getConfig().set("rpoints5", 0);
 		this.getConfig().set("bpoints5", 0);
 		this.saveConfig();
+		
+		api=new ISCOREAPI();
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -137,6 +142,12 @@ public class main extends JavaPlugin{
 								player.getInventory().setChestplate(air);
 								player.getInventory().setLeggings(air);
 								player.getInventory().setBoots(air);
+								
+								api.setScoreboard(player);
+								api.removePlayerFromTeam("Player", player);
+								api.refreshPlayerScoreboard(player);
+								api.removePlayerScoreboard(player);
+								
 								}else{
 									sender.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"Missing end!");
 								}
@@ -324,6 +335,15 @@ public class main extends JavaPlugin{
 							p.getInventory().clear();
 							coreCode cc = new coreCode(this);
 							cc.joinGame((Player)sender, args[1]);
+							
+							if(args[1].equalsIgnoreCase("1")){
+								api.createObjective("Arena_1", "Backbone");
+								api.createTeam("Player");
+								api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), 0);
+								api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), 0);
+								api.addPlayerToTeam("Player", p);
+								api.refreshPlayerScoreboard(p);
+							}
 						}
 					}else{
 						sender.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"Invalid command / usage!");

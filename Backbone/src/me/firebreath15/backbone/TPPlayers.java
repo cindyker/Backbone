@@ -145,5 +145,11 @@ public class TPPlayers {
 		p.getInventory().setBoots(air);
 		
 		p.getInventory().clear();
+		
+		ISCOREAPI api = new ISCOREAPI();
+		api.setScoreboard(p);
+		api.removePlayerFromTeam("Player", p);
+		api.refreshPlayerScoreboard(p);
+		api.removePlayerScoreboard(p);
 	}
 }

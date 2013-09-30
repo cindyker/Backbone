@@ -287,6 +287,8 @@ public class coreCode {
 					metattt.setColor(Color.BLUE);
 					boot.setItemMeta(metattt);
 					guy.getInventory().setBoots(boot);
+					
+					
 				}
 				//}
 				}else{
@@ -367,6 +369,8 @@ public class coreCode {
 						metattt.setColor(Color.RED);
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
+						
+						
 					}else{
 						Player guy = (Player)p;
 						double x = plugin.getConfig().getDouble("bluespawn2.x");
@@ -439,6 +443,8 @@ public class coreCode {
 						metattt.setColor(Color.BLUE);
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
+						
+						
 					}
 					}else{
 						p.sendMessage(ChatColor.RED+"You're already in the game! To switch arenas, use /bb leave");
@@ -519,6 +525,8 @@ public class coreCode {
 						metattt.setColor(Color.RED);
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
+						
+						
 					}else{
 						Player guy = (Player)p;
 						double x = plugin.getConfig().getDouble("bluespawn3.x");
@@ -591,6 +599,8 @@ public class coreCode {
 						metattt.setColor(Color.BLUE);
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
+						
+						
 					}
 					}else{
 						p.sendMessage(ChatColor.RED+"You're already in the game! To switch arenas, use /bb leave");
@@ -671,6 +681,8 @@ public class coreCode {
 						metattt.setColor(Color.RED);
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
+						
+						
 					}else{
 						Player guy = (Player)p;
 						double x = plugin.getConfig().getDouble("bluespawn4.x");
@@ -743,6 +755,8 @@ public class coreCode {
 						metattt.setColor(Color.BLUE);
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
+						
+						
 					}
 					}else{
 						p.sendMessage(ChatColor.RED+"You're already in the game! To switch arenas, use /bb leave");
@@ -823,6 +837,8 @@ public class coreCode {
 						metattt.setColor(Color.RED);
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
+						
+						
 					}else{
 						Player guy = (Player)p;
 						double x = plugin.getConfig().getDouble("bluespawn5.x");
@@ -895,6 +911,8 @@ public class coreCode {
 						metattt.setColor(Color.BLUE);
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
+						
+						
 					}
 					}else{
 						p.sendMessage(ChatColor.RED+"You're already in the game! To switch arenas, use /bb leave");

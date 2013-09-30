@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.Snowball;
 import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
@@ -30,6 +31,8 @@ main plugin;
         plugin = c;
     }
     
+    ISCOREAPI api = new ISCOREAPI();
+    
     @SuppressWarnings("deprecation")
 	@EventHandler
     public void onEnemyHit(EntityDamageByEntityEvent e){
@@ -52,6 +55,17 @@ main plugin;
     					}else{
     						//if in arena 1
     						if(plugin.getConfig().contains("rplist1."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist1."+p.getName()) || plugin.getConfig().contains("bplist1."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("redspawn1.x");
     							double y = plugin.getConfig().getDouble("redspawn1.y");
     							double z = plugin.getConfig().getDouble("redspawn1.z");
@@ -103,6 +117,17 @@ main plugin;
     						}//end of arena
     						//if in arena 2
     						if(plugin.getConfig().contains("rplist2."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist2."+p.getName()) || plugin.getConfig().contains("bplist2."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("redspawn2.x");
     							double y = plugin.getConfig().getDouble("redspawn2.y");
     							double z = plugin.getConfig().getDouble("redspawn2.z");
@@ -154,6 +179,17 @@ main plugin;
     						}//end of arena
     						//if in arena 3
     						if(plugin.getConfig().contains("rplist3."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist3."+p.getName()) || plugin.getConfig().contains("bplist3."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("redspawn3.x");
     							double y = plugin.getConfig().getDouble("redspawn3.y");
     							double z = plugin.getConfig().getDouble("redspawn3.z");
@@ -205,6 +241,17 @@ main plugin;
     						}//end of arena
     						//if in arena 4
     						if(plugin.getConfig().contains("rplist4."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist4."+p.getName()) || plugin.getConfig().contains("bplist4."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("redspawn4.x");
     							double y = plugin.getConfig().getDouble("redspawn4.y");
     							double z = plugin.getConfig().getDouble("redspawn4.z");
@@ -256,6 +303,17 @@ main plugin;
     						}//end of arena
     						//if in arena 5
     						if(plugin.getConfig().contains("rplist5."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist5."+p.getName()) || plugin.getConfig().contains("bplist5."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("redspawn5.x");
     							double y = plugin.getConfig().getDouble("redspawn5.y");
     							double z = plugin.getConfig().getDouble("redspawn5.z");
@@ -320,6 +378,17 @@ main plugin;
     					}else{
     						//if in arena 1
     						if(plugin.getConfig().contains("bplist1."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist1."+p.getName()) || plugin.getConfig().contains("bplist1."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("bluespawn1.x");
     							double y = plugin.getConfig().getDouble("bluespawn1.y");
     							double z = plugin.getConfig().getDouble("bluespawn1.z");
@@ -371,6 +440,17 @@ main plugin;
     						}//end of arena
     						//if in arena 2
     						if(plugin.getConfig().contains("bplist2."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist2."+p.getName()) || plugin.getConfig().contains("bplist2."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("bluespawn2.x");
     							double y = plugin.getConfig().getDouble("bluespawn2.y");
     							double z = plugin.getConfig().getDouble("bluespawn2.z");
@@ -422,6 +502,17 @@ main plugin;
     						}//end of arena
     						//if in arena 3
     						if(plugin.getConfig().contains("bplist3."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist3."+p.getName()) || plugin.getConfig().contains("bplist3."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("bluespawn3.x");
     							double y = plugin.getConfig().getDouble("bluespawn3.y");
     							double z = plugin.getConfig().getDouble("bluespawn3.z");
@@ -473,6 +564,17 @@ main plugin;
     						}//end of arena
     						//if in arena 4
     						if(plugin.getConfig().contains("bplist4."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist4."+p.getName()) || plugin.getConfig().contains("bplist4."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("bluespawn4.x");
     							double y = plugin.getConfig().getDouble("bluespawn4.y");
     							double z = plugin.getConfig().getDouble("bluespawn4.z");
@@ -524,6 +626,17 @@ main plugin;
     						}//end of arena
     						//if in arena 5
     						if(plugin.getConfig().contains("bplist5."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist5."+p.getName()) || plugin.getConfig().contains("bplist5."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("bluespawn5.x");
     							double y = plugin.getConfig().getDouble("bluespawn5.y");
     							double z = plugin.getConfig().getDouble("bluespawn5.z");
@@ -606,6 +719,17 @@ main plugin;
     					}else{
     						//if in arena 1
     						if(plugin.getConfig().contains("rplist1."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist1."+p.getName()) || plugin.getConfig().contains("bplist1."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("redspawn1.x");
     							double y = plugin.getConfig().getDouble("redspawn1.y");
     							double z = plugin.getConfig().getDouble("redspawn1.z");
@@ -657,6 +781,17 @@ main plugin;
     						}//end of arena
     						//if in arena 2
     						if(plugin.getConfig().contains("rplist2."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist2."+p.getName()) || plugin.getConfig().contains("bplist2."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("redspawn2.x");
     							double y = plugin.getConfig().getDouble("redspawn2.y");
     							double z = plugin.getConfig().getDouble("redspawn2.z");
@@ -708,6 +843,17 @@ main plugin;
     						}//end of arena
     						//if in arena 3
     						if(plugin.getConfig().contains("rplist3."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist3."+p.getName()) || plugin.getConfig().contains("bplist3."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("redspawn3.x");
     							double y = plugin.getConfig().getDouble("redspawn3.y");
     							double z = plugin.getConfig().getDouble("redspawn3.z");
@@ -759,6 +905,17 @@ main plugin;
     						}//end of arena
     						//if in arena 4
     						if(plugin.getConfig().contains("rplist4."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist4."+p.getName()) || plugin.getConfig().contains("bplist4."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("redspawn4.x");
     							double y = plugin.getConfig().getDouble("redspawn4.y");
     							double z = plugin.getConfig().getDouble("redspawn4.z");
@@ -810,6 +967,17 @@ main plugin;
     						}//end of arena
     						//if in arena 5
     						if(plugin.getConfig().contains("rplist5."+vn)){
+    							
+    							Player[] online = Bukkit.getServer().getOnlinePlayers();
+    							for(int i=0; i<online.length; i++){
+    								Player p = online[i];
+    								if(plugin.getConfig().contains("rplist5."+p.getName()) || plugin.getConfig().contains("bplist5."+p.getName())){
+    									api.setScoreboard(p);
+    									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"));
+    									api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), sc+1);
+    								}
+    							}
+    							
     							double x = plugin.getConfig().getDouble("redspawn5.x");
     							double y = plugin.getConfig().getDouble("redspawn5.y");
     							double z = plugin.getConfig().getDouble("redspawn5.z");
@@ -875,6 +1043,17 @@ main plugin;
 					}else{
 						//if in arena 1
 						if(plugin.getConfig().contains("bplist1."+vn)){
+							
+							Player[] online = Bukkit.getServer().getOnlinePlayers();
+							for(int i=0; i<online.length; i++){
+								Player p = online[i];
+								if(plugin.getConfig().contains("rplist1."+p.getName()) || plugin.getConfig().contains("bplist1."+p.getName())){
+									api.setScoreboard(p);
+									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"));
+									api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), sc+1);
+								}
+							}
+							
 							double x = plugin.getConfig().getDouble("bluespawn1.x");
 							double y = plugin.getConfig().getDouble("bluespawn1.y");
 							double z = plugin.getConfig().getDouble("bluespawn1.z");
@@ -926,6 +1105,17 @@ main plugin;
 						}//end of arena
 						//if in arena 2
 						if(plugin.getConfig().contains("bplist2."+vn)){
+							
+							Player[] online = Bukkit.getServer().getOnlinePlayers();
+							for(int i=0; i<online.length; i++){
+								Player p = online[i];
+								if(plugin.getConfig().contains("rplist2."+p.getName()) || plugin.getConfig().contains("bplist2."+p.getName())){
+									api.setScoreboard(p);
+									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"));
+									api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), sc+1);
+								}
+							}
+							
 							double x = plugin.getConfig().getDouble("bluespawn2.x");
 							double y = plugin.getConfig().getDouble("bluespawn2.y");
 							double z = plugin.getConfig().getDouble("bluespawn2.z");
@@ -977,6 +1167,17 @@ main plugin;
 						}//end of arena
 						//if in arena 3
 						if(plugin.getConfig().contains("bplist3."+vn)){
+							
+							Player[] online = Bukkit.getServer().getOnlinePlayers();
+							for(int i=0; i<online.length; i++){
+								Player p = online[i];
+								if(plugin.getConfig().contains("rplist3."+p.getName()) || plugin.getConfig().contains("bplist3."+p.getName())){
+									api.setScoreboard(p);
+									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"));
+									api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), sc+1);
+								}
+							}
+							
 							double x = plugin.getConfig().getDouble("bluespawn3.x");
 							double y = plugin.getConfig().getDouble("bluespawn3.y");
 							double z = plugin.getConfig().getDouble("bluespawn3.z");
@@ -1028,6 +1229,17 @@ main plugin;
 						}//end of arena
 						//if in arena 4
 						if(plugin.getConfig().contains("bplist4."+vn)){
+							
+							Player[] online = Bukkit.getServer().getOnlinePlayers();
+							for(int i=0; i<online.length; i++){
+								Player p = online[i];
+								if(plugin.getConfig().contains("rplist4."+p.getName()) || plugin.getConfig().contains("bplist4."+p.getName())){
+									api.setScoreboard(p);
+									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"));
+									api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), sc+1);
+								}
+							}
+							
 							double x = plugin.getConfig().getDouble("bluespawn4.x");
 							double y = plugin.getConfig().getDouble("bluespawn4.y");
 							double z = plugin.getConfig().getDouble("bluespawn4.z");
@@ -1079,6 +1291,17 @@ main plugin;
 						}//end of arena
 						//if in arena 5
 						if(plugin.getConfig().contains("bplist5."+vn)){
+							
+							Player[] online = Bukkit.getServer().getOnlinePlayers();
+							for(int i=0; i<online.length; i++){
+								Player p = online[i];
+								if(plugin.getConfig().contains("rplist5."+p.getName()) || plugin.getConfig().contains("bplist5."+p.getName())){
+									api.setScoreboard(p);
+									int sc = api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"));
+									api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), sc+1);
+								}
+							}
+							
 							double x = plugin.getConfig().getDouble("bluespawn5.x");
 							double y = plugin.getConfig().getDouble("bluespawn5.y");
 							double z = plugin.getConfig().getDouble("bluespawn5.z");
