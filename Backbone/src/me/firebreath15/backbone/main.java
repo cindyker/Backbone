@@ -3,17 +3,16 @@ package me.firebreath15.backbone;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class main extends JavaPlugin{
 	
 	ISCOREAPI api;
+	coreCode cc;
 	
 	public void onEnable(){		
 		getServer().getPluginManager().registerEvents(new BlazeRod(this), this);
@@ -79,6 +78,8 @@ public class main extends JavaPlugin{
 		this.saveConfig();
 		
 		api=new ISCOREAPI();
+		cc = new coreCode(this);
+		cc.initInvApi();
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -119,7 +120,7 @@ public class main extends JavaPlugin{
 							}
 						}
 						if(args[0].equalsIgnoreCase("leave")){
-							coreCode cc = new coreCode(this);
+							
 							String name = sender.getName();
 							if(this.getConfig().contains("players1."+name) || this.getConfig().contains("players2."+name) || this.getConfig().contains("players3."+name) || this.getConfig().contains("players4."+name) || this.getConfig().contains("players5."+name)){
 							cc.removeFromGame(name);
@@ -132,16 +133,10 @@ public class main extends JavaPlugin{
 								World w = this.getServer().getWorld(wn);
 								Location l = new Location(w,x,y,z);
 								player.teleport(l);
-								player.getInventory().clear();
 								player.setLevel(0);	
 								player.setFoodLevel(20);
 								player.setHealth(20);
 								player.sendMessage(ChatColor.GREEN+"You left the game! Thanks for playing!");
-								ItemStack air = new ItemStack(Material.AIR);
-								player.getInventory().setHelmet(air);
-								player.getInventory().setChestplate(air);
-								player.getInventory().setLeggings(air);
-								player.getInventory().setBoots(air);
 								
 								api.setScoreboard(player);
 								api.removePlayerFromTeam("Player", player);
@@ -331,13 +326,47 @@ public class main extends JavaPlugin{
 							sc.goShopping((Player)sender, args[1]);
 						}
 						if(args[0].equalsIgnoreCase("join")){
-							Player p = (Player)sender;
-							p.getInventory().clear();
-							coreCode cc = new coreCode(this);
+							Player p = (Player)sender;							
 							cc.joinGame((Player)sender, args[1]);
 							
 							if(args[1].equalsIgnoreCase("1")){
 								api.createObjective("Arena_1", "Backbone");
+								api.createTeam("Player");
+								api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), 0);
+								api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), 0);
+								api.addPlayerToTeam("Player", p);
+								api.refreshPlayerScoreboard(p);
+							}
+							
+							if(args[1].equalsIgnoreCase("2")){
+								api.createObjective("Arena_2", "Backbone");
+								api.createTeam("Player");
+								api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), 0);
+								api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), 0);
+								api.addPlayerToTeam("Player", p);
+								api.refreshPlayerScoreboard(p);
+							}
+							
+							if(args[1].equalsIgnoreCase("3")){
+								api.createObjective("Arena_3", "Backbone");
+								api.createTeam("Player");
+								api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), 0);
+								api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), 0);
+								api.addPlayerToTeam("Player", p);
+								api.refreshPlayerScoreboard(p);
+							}
+							
+							if(args[1].equalsIgnoreCase("4")){
+								api.createObjective("Arena_4", "Backbone");
+								api.createTeam("Player");
+								api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), 0);
+								api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), 0);
+								api.addPlayerToTeam("Player", p);
+								api.refreshPlayerScoreboard(p);
+							}
+							
+							if(args[1].equalsIgnoreCase("5")){
+								api.createObjective("Arena_5", "Backbone");
 								api.createTeam("Player");
 								api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Red"), 0);
 								api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE+"Blue"), 0);

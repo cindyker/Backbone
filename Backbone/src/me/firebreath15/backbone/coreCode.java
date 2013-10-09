@@ -19,6 +19,12 @@ public class coreCode {
 		plugin=c;
 	}
 	
+	INVAPI api;
+	
+	public void initInvApi(){
+		api = new INVAPI();
+	}
+	
 	public void removeFromGame(String name){
 		if(plugin.getConfig().contains("rplist1."+name)){
 			//if they were on the red team
@@ -28,7 +34,8 @@ public class coreCode {
 			plugin.getConfig().set("rplayers1",np-1);
 			plugin.saveConfig();
 			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game.");
-			
+			api.restorePlayerArmor(name);
+			api.restorePlayerInventory(name);
 			
 		}
 		if(plugin.getConfig().contains("bplist1."+name)){
@@ -39,7 +46,8 @@ public class coreCode {
 			plugin.getConfig().set("bplayers1",np-1);
 			plugin.saveConfig();
 			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game.");
-			
+			api.restorePlayerArmor(name);
+			api.restorePlayerInventory(name);
 			
 		}
 		
@@ -51,7 +59,8 @@ public class coreCode {
 			plugin.getConfig().set("rplayers2",np-1);
 			plugin.saveConfig();
 			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game.");
-			
+			api.restorePlayerArmor(name);
+			api.restorePlayerInventory(name);
 			
 		}
 		if(plugin.getConfig().contains("bplist2."+name)){
@@ -62,7 +71,8 @@ public class coreCode {
 			plugin.getConfig().set("bplayers2",np-1);
 			plugin.saveConfig();
 			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game.");
-			
+			api.restorePlayerArmor(name);
+			api.restorePlayerInventory(name);
 			
 		}
 		
@@ -74,7 +84,8 @@ public class coreCode {
 			plugin.getConfig().set("rplayers3",np-1);
 			plugin.saveConfig();
 			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game.");
-			
+			api.restorePlayerArmor(name);
+			api.restorePlayerInventory(name);
 			
 		}
 		if(plugin.getConfig().contains("bplist3."+name)){
@@ -85,7 +96,8 @@ public class coreCode {
 			plugin.getConfig().set("bplayers3",np-1);
 			plugin.saveConfig();
 			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game.");
-			
+			api.restorePlayerArmor(name);
+			api.restorePlayerInventory(name);
 			
 		}
 		
@@ -97,7 +109,8 @@ public class coreCode {
 			plugin.getConfig().set("rplayers4",np-1);
 			plugin.saveConfig();
 			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game.");
-			
+			api.restorePlayerArmor(name);
+			api.restorePlayerInventory(name);
 			
 		}
 		if(plugin.getConfig().contains("bplist4."+name)){
@@ -108,7 +121,8 @@ public class coreCode {
 			plugin.getConfig().set("bplayers4",np-1);
 			plugin.saveConfig();
 			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game.");
-			
+			api.restorePlayerArmor(name);
+			api.restorePlayerInventory(name);
 			
 		}
 		
@@ -120,7 +134,8 @@ public class coreCode {
 			plugin.getConfig().set("rplayers5",np-1);
 			plugin.saveConfig();
 			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game.");
-			
+			api.restorePlayerArmor(name);
+			api.restorePlayerInventory(name);
 			
 		}
 		if(plugin.getConfig().contains("bplist5."+name)){
@@ -131,7 +146,8 @@ public class coreCode {
 			plugin.getConfig().set("bplayers5",np-1);
 			plugin.saveConfig();
 			plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game.");
-			
+			api.restorePlayerArmor(name);
+			api.restorePlayerInventory(name);
 			
 		}
 	}
@@ -166,8 +182,10 @@ public class coreCode {
 					plugin.getConfig().createSection("rplist1."+ggg);
 					plugin.getConfig().createSection("players1."+ggg);
 					plugin.saveConfig();
-					guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
-					guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
+					api.storePlayerInventory(guy.getName());
+					api.storePlayerArmor(guy.getName());
+					guy.setHealth(20); 
+					guy.setFoodLevel(20);
 					PlayerInventory inv = guy.getInventory();
 					ItemStack brod = new ItemStack(Material.BLAZE_ROD, 1);
 					ItemStack sword = new ItemStack(Material.DIAMOND_SWORD, 1);
@@ -241,7 +259,8 @@ public class coreCode {
 						}	
 					
 					
-					guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
+					api.storePlayerInventory(guy.getName()); guy.setHealth(20); guy.setFoodLevel(20);
+					api.storePlayerArmor(guy.getName());
 					PlayerInventory inv = guy.getInventory();
 					ItemStack brod = new ItemStack(Material.BLAZE_ROD, 1);
 					ItemStack sword = new ItemStack(Material.DIAMOND_SWORD, 1);
@@ -323,7 +342,8 @@ public class coreCode {
 						plugin.getConfig().createSection("rplist2."+ggg);
 						plugin.getConfig().createSection("players2."+ggg);
 						plugin.saveConfig();
-						guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerInventory(guy.getName()); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerArmor(guy.getName());
 						PlayerInventory inv = guy.getInventory();
 						ItemStack brod = new ItemStack(Material.BLAZE_ROD, 1);
 						ItemStack sword = new ItemStack(Material.DIAMOND_SWORD, 1);
@@ -397,7 +417,8 @@ public class coreCode {
 								plugin.getServer().broadcastMessage(ChatColor.GOLD+"[Backbone] "+ChatColor.DARK_GREEN+"Game has begun in arena 2! This game will last 5 minutes!");
 							}	
 						
-						guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerInventory(guy.getName()); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerArmor(guy.getName());
 						PlayerInventory inv = guy.getInventory();
 						ItemStack brod = new ItemStack(Material.BLAZE_ROD, 1);
 						ItemStack sword = new ItemStack(Material.DIAMOND_SWORD, 1);
@@ -479,7 +500,8 @@ public class coreCode {
 						plugin.getConfig().createSection("rplist3."+ggg);
 						plugin.getConfig().createSection("players3."+ggg);
 						plugin.saveConfig();
-						guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerInventory(guy.getName()); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerArmor(guy.getName());
 						PlayerInventory inv = guy.getInventory();
 						ItemStack brod = new ItemStack(Material.BLAZE_ROD, 1);
 						ItemStack sword = new ItemStack(Material.DIAMOND_SWORD, 1);
@@ -553,7 +575,8 @@ public class coreCode {
 								plugin.getServer().broadcastMessage(ChatColor.GOLD+"[Backbone] "+ChatColor.DARK_GREEN+"Game has begun in arena 3! This game will last 5 minutes!");
 							}	
 						
-						guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerInventory(guy.getName()); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerArmor(guy.getName());
 						PlayerInventory inv = guy.getInventory();
 						ItemStack brod = new ItemStack(Material.BLAZE_ROD, 1);
 						ItemStack sword = new ItemStack(Material.DIAMOND_SWORD, 1);
@@ -635,7 +658,8 @@ public class coreCode {
 						plugin.getConfig().createSection("rplist4."+ggg);
 						plugin.getConfig().createSection("players4."+ggg);
 						plugin.saveConfig();
-						guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerInventory(guy.getName()); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerArmor(guy.getName());
 						PlayerInventory inv = guy.getInventory();
 						ItemStack brod = new ItemStack(Material.BLAZE_ROD, 1);
 						ItemStack sword = new ItemStack(Material.DIAMOND_SWORD, 1);
@@ -709,7 +733,8 @@ public class coreCode {
 								plugin.getServer().broadcastMessage(ChatColor.GOLD+"[Backbone] "+ChatColor.DARK_GREEN+"Game has begun in arena 4! This game will last 5 minutes!");
 							}	
 						
-						guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerInventory(guy.getName()); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerArmor(guy.getName());
 						PlayerInventory inv = guy.getInventory();
 						ItemStack brod = new ItemStack(Material.BLAZE_ROD, 1);
 						ItemStack sword = new ItemStack(Material.DIAMOND_SWORD, 1);
@@ -791,7 +816,8 @@ public class coreCode {
 						plugin.getConfig().createSection("rplist5."+ggg);
 						plugin.getConfig().createSection("players5."+ggg);
 						plugin.saveConfig();
-						guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerInventory(guy.getName()); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerArmor(guy.getName());
 						PlayerInventory inv = guy.getInventory();
 						ItemStack brod = new ItemStack(Material.BLAZE_ROD, 1);
 						ItemStack sword = new ItemStack(Material.DIAMOND_SWORD, 1);
@@ -865,7 +891,8 @@ public class coreCode {
 								plugin.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"Game has begun in arena 5! This game will last 5 minutes!");
 							}	
 						
-						guy.getInventory().clear(); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerInventory(guy.getName()); guy.setHealth(20); guy.setFoodLevel(20);
+						api.storePlayerArmor(guy.getName());
 						PlayerInventory inv = guy.getInventory();
 						ItemStack brod = new ItemStack(Material.BLAZE_ROD, 1);
 						ItemStack sword = new ItemStack(Material.DIAMOND_SWORD, 1);

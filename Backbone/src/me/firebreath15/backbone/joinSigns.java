@@ -59,9 +59,7 @@ public class joinSigns implements Listener{
 				if(s.getLine(1).equalsIgnoreCase(ChatColor.YELLOW+"Join")){
 					String l3 = s.getLine(2);
 					String an = l3.replaceAll("Arena: ", "");
-					p.getInventory().clear();
-					coreCode cc = new coreCode(plugin);
-					cc.joinGame(p, an);
+					plugin.cc.joinGame(p, an);
 					
 					ISCOREAPI api = new ISCOREAPI();
 					
