@@ -151,12 +151,16 @@ public class main extends JavaPlugin{
 							}
 						}
 						if(args[0].equalsIgnoreCase("store")){
-							storeCode sc = new storeCode(this);
-							String name = sender.getName();
-							if(this.getConfig().contains("players1."+name) || this.getConfig().contains("players2."+name) || this.getConfig().contains("players3."+name) || this.getConfig().contains("players4."+name) || this.getConfig().contains("players5."+name)){
-								sc.giveMenu((Player)sender);
+							if(sender.hasPermission("backbone.store")){
+								storeCode sc = new storeCode(this);
+								String name = sender.getName();
+								if(this.getConfig().contains("players1."+name) || this.getConfig().contains("players2."+name) || this.getConfig().contains("players3."+name) || this.getConfig().contains("players4."+name) || this.getConfig().contains("players5."+name)){
+									sc.giveMenu((Player)sender);
+								}else{
+									sender.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"You aren't playing!");
+								}
 							}else{
-								sender.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"You aren't playing!");
+								sender.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"You don't have permission!");
 							}
 						}
 					}else{
@@ -322,8 +326,10 @@ public class main extends JavaPlugin{
 							}
 						}
 						if(args[0].equalsIgnoreCase("store")){
-							storeCode sc = new storeCode(this);
-							sc.goShopping((Player)sender, args[1]);
+							if(sender.hasPermission("backbone.store")){
+								storeCode sc = new storeCode(this);
+								sc.goShopping((Player)sender, args[1]);
+							}
 						}
 						if(args[0].equalsIgnoreCase("join")){
 							Player p = (Player)sender;							
