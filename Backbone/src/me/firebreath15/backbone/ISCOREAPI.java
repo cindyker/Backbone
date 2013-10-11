@@ -73,5 +73,6 @@ public class ISCOREAPI{
 	
 	public void removePlayerScoreboard(Player p){
 		p.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
+		p.getScoreboard().clearSlot(DisplaySlot.SIDEBAR);
 	}
 }

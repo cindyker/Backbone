@@ -1,5 +1,5 @@
 name: Backbone
-version: 7.3.5.1
+version: 7.3.6.1
 main: me.firebreath15.backbone.main
 commands:
   bb:
@@ -9,25 +9,37 @@ commands:
     permission-message: No Permission!
 permissions:
   backbone.use:
-    default: true
+    default: false
   backbone.store:
-    default: true
+    default: false
   backbone.rspawn:
-    default: op
+    default: false
   backbone.bspawn:
-    default: op
+    default: false
   backbone.setreload:
-    default: op
+    default: false
   backbone.setend:
-    default: op
+    default: false
   backbone.place:
-    default: op
+    default: false
   backbone.break:
-    default: op
+    default: false
   backbone.sign:
-    default: op
+    default: false
   backbone.player:
-    default: true
+    default: op
     children:
       backbone.use: true
       backbone.store: true
+  backbone.admin:
+    default: op
+    children:
+      backbone.use: true
+      backbone.store: true
+      backbone.rspawn: true
+      backbone.bspawn: true
+      backbone.setreload: true
+      backbone.setend: true
+      backbone.place: true
+      backbone.break: true
+      backbone.sign: true

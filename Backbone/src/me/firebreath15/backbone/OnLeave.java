@@ -6,19 +6,26 @@
 
 package me.firebreath15.backbone;
 
+import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerKickEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
-import org.bukkit.event.EventHandler;
-import org.bukkit.ChatColor;
 public class OnLeave implements Listener{
 
 main plugin;
     
     OnLeave(main c) {
         plugin = c;
+    }
+    
+    @EventHandler(priority=EventPriority.LOWEST)
+    public void onPJoin(PlayerJoinEvent e){
+    	plugin.api.removePlayerScoreboard(e.getPlayer());
     }
 	
     @EventHandler
