@@ -47,11 +47,12 @@ public class OnReload implements Listener{
 					Player guy = event.getPlayer();	
 					if(guy.getLevel() == 0){
 					guy.setLevel(40);
-					guy.setFoodLevel(20); //all fed now
-					guy.sendMessage(ChatColor.BLUE+"You got more ammo and food!");
+					guy.setHealth(20D);
+					guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"Ammo and Health Reloaded!");
 					//tell them theyre all good. ok done reloading!
 					}else{
-						guy.sendMessage(ChatColor.RED+"You still have ammo left!");
+						guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"You still have ammo left!");
+						guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"You still have ammo left!");
 					}
 				}
 			}
@@ -76,12 +77,12 @@ public class OnReload implements Listener{
 			//ok theyre clicking the right block. Lets reload them now.
 					Player guy = event.getPlayer();	
 					if(guy.getLevel() == 0){
-					guy.setLevel(40);
-					guy.setFoodLevel(20); //all fed now
-					guy.sendMessage(ChatColor.BLUE+"You got more ammo and food!");
+						guy.setLevel(40);
+						guy.setHealth(20D);
+						guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"Ammo and Health Reloaded!");
 					//tell them theyre all good. ok done reloading!
 					}else{
-						guy.sendMessage(ChatColor.RED+"You still have ammo left!");
+						guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"You still have ammo left!");
 					}
 				}
 			}
@@ -106,12 +107,12 @@ public class OnReload implements Listener{
 			//ok theyre clicking the right block. Lets reload them now.
 					Player guy = event.getPlayer();	
 					if(guy.getLevel() == 0){
-					guy.setLevel(40);
-					guy.setFoodLevel(20); //all fed now
-					guy.sendMessage(ChatColor.BLUE+"You got more ammo and food!");
+						guy.setLevel(40);
+						guy.setHealth(20D);
+						guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"Ammo and Health Reloaded!");
 					//tell them theyre all good. ok done reloading!
 					}else{
-						guy.sendMessage(ChatColor.RED+"You still have ammo left!");
+						guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"You still have ammo left!");
 					}
 				}
 			}
@@ -136,12 +137,12 @@ public class OnReload implements Listener{
 			//ok theyre clicking the right block. Lets reload them now.
 					Player guy = event.getPlayer();	
 					if(guy.getLevel() == 0){
-					guy.setLevel(40);
-					guy.setFoodLevel(20); //all fed now
-					guy.sendMessage(ChatColor.BLUE+"You got more ammo and food!");
+						guy.setLevel(40);
+						guy.setHealth(20D);
+						guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"Ammo and Health Reloaded!");
 					//tell them theyre all good. ok done reloading!
 					}else{
-						guy.sendMessage(ChatColor.RED+"You still have ammo left!");
+						guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"You still have ammo left!");
 					}
 				}
 			}
@@ -166,12 +167,12 @@ public class OnReload implements Listener{
 			//ok theyre clicking the right block. Lets reload them now.
 					Player guy = event.getPlayer();	
 					if(guy.getLevel() == 0){
-					guy.setLevel(40);
-					guy.setFoodLevel(20); //all fed now
-					guy.sendMessage(ChatColor.BLUE+"You got more ammo and food!");
+						guy.setLevel(40);
+						guy.setHealth(20D);
+						guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"Ammo and Health Reloaded!");
 					//tell them theyre all good. ok done reloading!
 					}else{
-						guy.sendMessage(ChatColor.RED+"You still have ammo left!");
+						guy.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"You still have ammo left!");
 					}
 		}
 		

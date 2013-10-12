@@ -24,6 +24,7 @@ public class main extends JavaPlugin{
 		getServer().getPluginManager().registerEvents(new OnHoeHit(this), this);
 		getServer().getPluginManager().registerEvents(new ArrowShoot(this), this);
 		getServer().getPluginManager().registerEvents(new joinSigns(this), this);
+		getServer().getPluginManager().registerEvents(new OnRegain(this), this);
 		
 		this.reloadConfig();
 		this.getConfig().set("bplist1", null);
