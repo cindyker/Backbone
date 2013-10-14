@@ -710,12 +710,11 @@ main plugin;
     	Entity victim = e.getEntity();
     	World w = e.getEntity().getWorld();
     	if(damager instanceof Player && victim instanceof Player){
-    		if(((Player)damager).getItemInHand().getType()==Material.DIAMOND_SWORD){
 	    		Player k = (Player)damager;
 	    		Player v = (Player)victim;
 	    		String kn = k.getName();
 	    		String vn = v.getName();
-	    		if(plugin.getConfig().contains("players1."+vn) || plugin.getConfig().contains("players2."+vn) || plugin.getConfig().contains("players3."+vn) || plugin.getConfig().contains("players4."+vn) || plugin.getConfig().contains("players5."+vn)){
+	    		if((plugin.getConfig().contains("players1."+vn) || plugin.getConfig().contains("players2."+vn) || plugin.getConfig().contains("players3."+vn) || plugin.getConfig().contains("players4."+vn) || plugin.getConfig().contains("players5."+vn)) && (((Player)damager).getItemInHand().getType()==Material.DIAMOND_SWORD)){
 	    			if(plugin.getConfig().contains("rplist1."+vn) || plugin.getConfig().contains("rplist2."+vn) || plugin.getConfig().contains("rplist3."+vn) || plugin.getConfig().contains("rplist4."+vn) || plugin.getConfig().contains("rplist5."+vn)){
 	    				if(plugin.getConfig().contains("bplist1."+kn) || plugin.getConfig().contains("bplist2."+kn) || plugin.getConfig().contains("bplist3."+kn) || plugin.getConfig().contains("bplist4."+kn) || plugin.getConfig().contains("bplist5."+kn)){
 	    					//player is on red, enemy on blue
@@ -1368,10 +1367,6 @@ main plugin;
 	    			e.setCancelled(true);
 	    			//if player isn't playing, they can't hurt people!
 	    		}
-    		}else{
-    			((Player)damager).sendMessage(ChatColor.DARK_PURPLE+"[Backbone]"+ChatColor.GOLD+" You have to melee with your sword!");
-    			e.setCancelled(true);
-    		}
     	}//damager
     	
     }//end of sword fight

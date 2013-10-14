@@ -231,7 +231,7 @@ public class coreCode {
 					metattt.setColor(Color.RED);
 					boot.setItemMeta(metattt);
 					guy.getInventory().setBoots(boot);
-					guy.getInventory().setContents(guy.getInventory().getContents());
+					guy.updateInventory();
 				}else{
 					Player guy = (Player)p;
 					double x = plugin.getConfig().getDouble("bluespawn1.x");
@@ -307,7 +307,7 @@ public class coreCode {
 					boot.setItemMeta(metattt);
 					guy.getInventory().setBoots(boot);
 					
-					guy.getInventory().setContents(guy.getInventory().getContents());
+					guy.updateInventory();
 				}
 				//}
 				}else{
@@ -390,7 +390,7 @@ public class coreCode {
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
 						
-						guy.getInventory().setContents(guy.getInventory().getContents());
+						guy.updateInventory();
 					}else{
 						Player guy = (Player)p;
 						double x = plugin.getConfig().getDouble("bluespawn2.x");
@@ -465,7 +465,7 @@ public class coreCode {
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
 						
-						guy.getInventory().setContents(guy.getInventory().getContents());
+						guy.updateInventory();
 					}
 					}else{
 						p.sendMessage(ChatColor.RED+"You're already in the game! To switch arenas, use /bb leave");
@@ -548,7 +548,7 @@ public class coreCode {
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
 						
-						guy.getInventory().setContents(guy.getInventory().getContents());
+						guy.updateInventory();
 					}else{
 						Player guy = (Player)p;
 						double x = plugin.getConfig().getDouble("bluespawn3.x");
@@ -623,7 +623,7 @@ public class coreCode {
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
 						
-						guy.getInventory().setContents(guy.getInventory().getContents());
+						guy.updateInventory();
 					}
 					}else{
 						p.sendMessage(ChatColor.RED+"You're already in the game! To switch arenas, use /bb leave");
@@ -706,7 +706,7 @@ public class coreCode {
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
 						
-						guy.getInventory().setContents(guy.getInventory().getContents());
+						guy.updateInventory();
 					}else{
 						Player guy = (Player)p;
 						double x = plugin.getConfig().getDouble("bluespawn4.x");
@@ -781,7 +781,7 @@ public class coreCode {
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
 						
-						guy.getInventory().setContents(guy.getInventory().getContents());
+						guy.updateInventory();
 					}
 					}else{
 						p.sendMessage(ChatColor.RED+"You're already in the game! To switch arenas, use /bb leave");
@@ -864,7 +864,7 @@ public class coreCode {
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
 						
-						guy.getInventory().setContents(guy.getInventory().getContents());
+						guy.updateInventory();
 					}else{
 						Player guy = (Player)p;
 						double x = plugin.getConfig().getDouble("bluespawn5.x");
@@ -939,7 +939,7 @@ public class coreCode {
 						boot.setItemMeta(metattt);
 						guy.getInventory().setBoots(boot);
 						
-						guy.getInventory().setContents(guy.getInventory().getContents());
+						guy.updateInventory();
 					}
 					}else{
 						p.sendMessage(ChatColor.RED+"You're already in the game! To switch arenas, use /bb leave");
