@@ -188,6 +188,7 @@ public class OnHit implements Listener{
 							}
 						}else{
 							d.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"You must melee with your Diamond Sword!");
+							e.setCancelled(true);
 						}
 					}else{
 						e.setCancelled(true);
