@@ -1,7 +1,6 @@
 package me.firebreath15.backbone;
 
 import org.bukkit.ChatColor;
-import org.bukkit.Color;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -10,7 +9,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.scheduler.BukkitTask;
 
 public class coreCode {
@@ -152,6 +150,8 @@ public class coreCode {
 		}
 	}
 	
+	Armor arm = new Armor();
+	
 	@SuppressWarnings({ "unused", "deprecation" })
 	public void joinGame(Player p, String a){
 		String num = a;
@@ -207,30 +207,9 @@ public class coreCode {
 					//K they have weapons, give them ammo!
 					guy.setLevel(40);
 					
-					//helmet
-					ItemStack helm = new ItemStack(Material.LEATHER_HELMET);
-					LeatherArmorMeta meta = (LeatherArmorMeta) helm.getItemMeta();
-					meta.setColor(Color.RED);
-					helm.setItemMeta(meta);
-					guy.getInventory().setHelmet(helm);
-					//chestplate
-					ItemStack ches = new ItemStack(Material.LEATHER_CHESTPLATE);
-					LeatherArmorMeta metat = (LeatherArmorMeta) ches.getItemMeta();
-					metat.setColor(Color.RED);
-					ches.setItemMeta(metat);
-					guy.getInventory().setChestplate(ches);
-					//leggings
-					ItemStack legg = new ItemStack(Material.LEATHER_LEGGINGS);
-					LeatherArmorMeta metatt = (LeatherArmorMeta) legg.getItemMeta();
-					metatt.setColor(Color.RED);
-					legg.setItemMeta(metatt);
-					guy.getInventory().setLeggings(legg);
-					//boots
-					ItemStack boot = new ItemStack(Material.LEATHER_BOOTS);
-					LeatherArmorMeta metattt = (LeatherArmorMeta) boot.getItemMeta();
-					metattt.setColor(Color.RED);
-					boot.setItemMeta(metattt);
-					guy.getInventory().setBoots(boot);
+					arm.prepareArmor();
+					guy.getInventory().setArmorContents(arm.redarmor);
+					
 					guy.updateInventory();
 				}else{
 					Player guy = (Player)p;
@@ -282,30 +261,8 @@ public class coreCode {
 					//K they have weapons, give them ammo!
 					guy.setLevel(40);
 					
-					//helmet
-					ItemStack helm = new ItemStack(Material.LEATHER_HELMET);
-					LeatherArmorMeta meta = (LeatherArmorMeta) helm.getItemMeta();
-					meta.setColor(Color.BLUE);
-					helm.setItemMeta(meta);
-					guy.getInventory().setHelmet(helm);
-					//chestplate
-					ItemStack ches = new ItemStack(Material.LEATHER_CHESTPLATE);
-					LeatherArmorMeta metat = (LeatherArmorMeta) ches.getItemMeta();
-					metat.setColor(Color.BLUE);
-					ches.setItemMeta(metat);
-					guy.getInventory().setChestplate(ches);
-					//leggings
-					ItemStack legg = new ItemStack(Material.LEATHER_LEGGINGS);
-					LeatherArmorMeta metatt = (LeatherArmorMeta) legg.getItemMeta();
-					metatt.setColor(Color.BLUE);
-					legg.setItemMeta(metatt);
-					guy.getInventory().setLeggings(legg);
-					//boots
-					ItemStack boot = new ItemStack(Material.LEATHER_BOOTS);
-					LeatherArmorMeta metattt = (LeatherArmorMeta) boot.getItemMeta();
-					metattt.setColor(Color.BLUE);
-					boot.setItemMeta(metattt);
-					guy.getInventory().setBoots(boot);
+					arm.prepareArmor();
+					guy.getInventory().setArmorContents(arm.bluearmor);
 					
 					guy.updateInventory();
 				}
@@ -365,30 +322,8 @@ public class coreCode {
 						//K they have weapons, give them ammo!
 						guy.setLevel(40);
 						
-						//helmet
-						ItemStack helm = new ItemStack(Material.LEATHER_HELMET);
-						LeatherArmorMeta meta = (LeatherArmorMeta) helm.getItemMeta();
-						meta.setColor(Color.RED);
-						helm.setItemMeta(meta);
-						guy.getInventory().setHelmet(helm);
-						//chestplate
-						ItemStack ches = new ItemStack(Material.LEATHER_CHESTPLATE);
-						LeatherArmorMeta metat = (LeatherArmorMeta) ches.getItemMeta();
-						metat.setColor(Color.RED);
-						ches.setItemMeta(metat);
-						guy.getInventory().setChestplate(ches);
-						//leggings
-						ItemStack legg = new ItemStack(Material.LEATHER_LEGGINGS);
-						LeatherArmorMeta metatt = (LeatherArmorMeta) legg.getItemMeta();
-						metatt.setColor(Color.RED);
-						legg.setItemMeta(metatt);
-						guy.getInventory().setLeggings(legg);
-						//boots
-						ItemStack boot = new ItemStack(Material.LEATHER_BOOTS);
-						LeatherArmorMeta metattt = (LeatherArmorMeta) boot.getItemMeta();
-						metattt.setColor(Color.RED);
-						boot.setItemMeta(metattt);
-						guy.getInventory().setBoots(boot);
+						arm.prepareArmor();
+						guy.getInventory().setArmorContents(arm.redarmor);
 						
 						guy.updateInventory();
 					}else{
@@ -440,30 +375,8 @@ public class coreCode {
 						//K they have weapons, give them ammo!
 						guy.setLevel(40);
 						
-						//helmet
-						ItemStack helm = new ItemStack(Material.LEATHER_HELMET);
-						LeatherArmorMeta meta = (LeatherArmorMeta) helm.getItemMeta();
-						meta.setColor(Color.BLUE);
-						helm.setItemMeta(meta);
-						guy.getInventory().setHelmet(helm);
-						//chestplate
-						ItemStack ches = new ItemStack(Material.LEATHER_CHESTPLATE);
-						LeatherArmorMeta metat = (LeatherArmorMeta) ches.getItemMeta();
-						metat.setColor(Color.BLUE);
-						ches.setItemMeta(metat);
-						guy.getInventory().setChestplate(ches);
-						//leggings
-						ItemStack legg = new ItemStack(Material.LEATHER_LEGGINGS);
-						LeatherArmorMeta metatt = (LeatherArmorMeta) legg.getItemMeta();
-						metatt.setColor(Color.BLUE);
-						legg.setItemMeta(metatt);
-						guy.getInventory().setLeggings(legg);
-						//boots
-						ItemStack boot = new ItemStack(Material.LEATHER_BOOTS);
-						LeatherArmorMeta metattt = (LeatherArmorMeta) boot.getItemMeta();
-						metattt.setColor(Color.BLUE);
-						boot.setItemMeta(metattt);
-						guy.getInventory().setBoots(boot);
+						arm.prepareArmor();
+						guy.getInventory().setArmorContents(arm.bluearmor);
 						
 						guy.updateInventory();
 					}
@@ -523,30 +436,8 @@ public class coreCode {
 						//K they have weapons, give them ammo!
 						guy.setLevel(40);
 						
-						//helmet
-						ItemStack helm = new ItemStack(Material.LEATHER_HELMET);
-						LeatherArmorMeta meta = (LeatherArmorMeta) helm.getItemMeta();
-						meta.setColor(Color.RED);
-						helm.setItemMeta(meta);
-						guy.getInventory().setHelmet(helm);
-						//chestplate
-						ItemStack ches = new ItemStack(Material.LEATHER_CHESTPLATE);
-						LeatherArmorMeta metat = (LeatherArmorMeta) ches.getItemMeta();
-						metat.setColor(Color.RED);
-						ches.setItemMeta(metat);
-						guy.getInventory().setChestplate(ches);
-						//leggings
-						ItemStack legg = new ItemStack(Material.LEATHER_LEGGINGS);
-						LeatherArmorMeta metatt = (LeatherArmorMeta) legg.getItemMeta();
-						metatt.setColor(Color.RED);
-						legg.setItemMeta(metatt);
-						guy.getInventory().setLeggings(legg);
-						//boots
-						ItemStack boot = new ItemStack(Material.LEATHER_BOOTS);
-						LeatherArmorMeta metattt = (LeatherArmorMeta) boot.getItemMeta();
-						metattt.setColor(Color.RED);
-						boot.setItemMeta(metattt);
-						guy.getInventory().setBoots(boot);
+						arm.prepareArmor();
+						guy.getInventory().setArmorContents(arm.redarmor);
 						
 						guy.updateInventory();
 					}else{
@@ -598,30 +489,8 @@ public class coreCode {
 						//K they have weapons, give them ammo!
 						guy.setLevel(40);
 						
-						//helmet
-						ItemStack helm = new ItemStack(Material.LEATHER_HELMET);
-						LeatherArmorMeta meta = (LeatherArmorMeta) helm.getItemMeta();
-						meta.setColor(Color.BLUE);
-						helm.setItemMeta(meta);
-						guy.getInventory().setHelmet(helm);
-						//chestplate
-						ItemStack ches = new ItemStack(Material.LEATHER_CHESTPLATE);
-						LeatherArmorMeta metat = (LeatherArmorMeta) ches.getItemMeta();
-						metat.setColor(Color.BLUE);
-						ches.setItemMeta(metat);
-						guy.getInventory().setChestplate(ches);
-						//leggings
-						ItemStack legg = new ItemStack(Material.LEATHER_LEGGINGS);
-						LeatherArmorMeta metatt = (LeatherArmorMeta) legg.getItemMeta();
-						metatt.setColor(Color.BLUE);
-						legg.setItemMeta(metatt);
-						guy.getInventory().setLeggings(legg);
-						//boots
-						ItemStack boot = new ItemStack(Material.LEATHER_BOOTS);
-						LeatherArmorMeta metattt = (LeatherArmorMeta) boot.getItemMeta();
-						metattt.setColor(Color.BLUE);
-						boot.setItemMeta(metattt);
-						guy.getInventory().setBoots(boot);
+						arm.prepareArmor();
+						guy.getInventory().setArmorContents(arm.bluearmor);
 						
 						guy.updateInventory();
 					}
@@ -681,30 +550,8 @@ public class coreCode {
 						//K they have weapons, give them ammo!
 						guy.setLevel(40);
 						
-						//helmet
-						ItemStack helm = new ItemStack(Material.LEATHER_HELMET);
-						LeatherArmorMeta meta = (LeatherArmorMeta) helm.getItemMeta();
-						meta.setColor(Color.RED);
-						helm.setItemMeta(meta);
-						guy.getInventory().setHelmet(helm);
-						//chestplate
-						ItemStack ches = new ItemStack(Material.LEATHER_CHESTPLATE);
-						LeatherArmorMeta metat = (LeatherArmorMeta) ches.getItemMeta();
-						metat.setColor(Color.RED);
-						ches.setItemMeta(metat);
-						guy.getInventory().setChestplate(ches);
-						//leggings
-						ItemStack legg = new ItemStack(Material.LEATHER_LEGGINGS);
-						LeatherArmorMeta metatt = (LeatherArmorMeta) legg.getItemMeta();
-						metatt.setColor(Color.RED);
-						legg.setItemMeta(metatt);
-						guy.getInventory().setLeggings(legg);
-						//boots
-						ItemStack boot = new ItemStack(Material.LEATHER_BOOTS);
-						LeatherArmorMeta metattt = (LeatherArmorMeta) boot.getItemMeta();
-						metattt.setColor(Color.RED);
-						boot.setItemMeta(metattt);
-						guy.getInventory().setBoots(boot);
+						arm.prepareArmor();
+						guy.getInventory().setArmorContents(arm.redarmor);
 						
 						guy.updateInventory();
 					}else{
@@ -756,30 +603,8 @@ public class coreCode {
 						//K they have weapons, give them ammo!
 						guy.setLevel(40);
 						
-						//helmet
-						ItemStack helm = new ItemStack(Material.LEATHER_HELMET);
-						LeatherArmorMeta meta = (LeatherArmorMeta) helm.getItemMeta();
-						meta.setColor(Color.BLUE);
-						helm.setItemMeta(meta);
-						guy.getInventory().setHelmet(helm);
-						//chestplate
-						ItemStack ches = new ItemStack(Material.LEATHER_CHESTPLATE);
-						LeatherArmorMeta metat = (LeatherArmorMeta) ches.getItemMeta();
-						metat.setColor(Color.BLUE);
-						ches.setItemMeta(metat);
-						guy.getInventory().setChestplate(ches);
-						//leggings
-						ItemStack legg = new ItemStack(Material.LEATHER_LEGGINGS);
-						LeatherArmorMeta metatt = (LeatherArmorMeta) legg.getItemMeta();
-						metatt.setColor(Color.BLUE);
-						legg.setItemMeta(metatt);
-						guy.getInventory().setLeggings(legg);
-						//boots
-						ItemStack boot = new ItemStack(Material.LEATHER_BOOTS);
-						LeatherArmorMeta metattt = (LeatherArmorMeta) boot.getItemMeta();
-						metattt.setColor(Color.BLUE);
-						boot.setItemMeta(metattt);
-						guy.getInventory().setBoots(boot);
+						arm.prepareArmor();
+						guy.getInventory().setArmorContents(arm.bluearmor);
 						
 						guy.updateInventory();
 					}
@@ -839,30 +664,8 @@ public class coreCode {
 						//K they have weapons, give them ammo!
 						guy.setLevel(40);
 						
-						//helmet
-						ItemStack helm = new ItemStack(Material.LEATHER_HELMET);
-						LeatherArmorMeta meta = (LeatherArmorMeta) helm.getItemMeta();
-						meta.setColor(Color.RED);
-						helm.setItemMeta(meta);
-						guy.getInventory().setHelmet(helm);
-						//chestplate
-						ItemStack ches = new ItemStack(Material.LEATHER_CHESTPLATE);
-						LeatherArmorMeta metat = (LeatherArmorMeta) ches.getItemMeta();
-						metat.setColor(Color.RED);
-						ches.setItemMeta(metat);
-						guy.getInventory().setChestplate(ches);
-						//leggings
-						ItemStack legg = new ItemStack(Material.LEATHER_LEGGINGS);
-						LeatherArmorMeta metatt = (LeatherArmorMeta) legg.getItemMeta();
-						metatt.setColor(Color.RED);
-						legg.setItemMeta(metatt);
-						guy.getInventory().setLeggings(legg);
-						//boots
-						ItemStack boot = new ItemStack(Material.LEATHER_BOOTS);
-						LeatherArmorMeta metattt = (LeatherArmorMeta) boot.getItemMeta();
-						metattt.setColor(Color.RED);
-						boot.setItemMeta(metattt);
-						guy.getInventory().setBoots(boot);
+						arm.prepareArmor();
+						guy.getInventory().setArmorContents(arm.redarmor);
 						
 						guy.updateInventory();
 					}else{
@@ -914,30 +717,8 @@ public class coreCode {
 						//K they have weapons, give them ammo!
 						guy.setLevel(40);
 						
-						//helmet
-						ItemStack helm = new ItemStack(Material.LEATHER_HELMET);
-						LeatherArmorMeta meta = (LeatherArmorMeta) helm.getItemMeta();
-						meta.setColor(Color.BLUE);
-						helm.setItemMeta(meta);
-						guy.getInventory().setHelmet(helm);
-						//chestplate
-						ItemStack ches = new ItemStack(Material.LEATHER_CHESTPLATE);
-						LeatherArmorMeta metat = (LeatherArmorMeta) ches.getItemMeta();
-						metat.setColor(Color.BLUE);
-						ches.setItemMeta(metat);
-						guy.getInventory().setChestplate(ches);
-						//leggings
-						ItemStack legg = new ItemStack(Material.LEATHER_LEGGINGS);
-						LeatherArmorMeta metatt = (LeatherArmorMeta) legg.getItemMeta();
-						metatt.setColor(Color.BLUE);
-						legg.setItemMeta(metatt);
-						guy.getInventory().setLeggings(legg);
-						//boots
-						ItemStack boot = new ItemStack(Material.LEATHER_BOOTS);
-						LeatherArmorMeta metattt = (LeatherArmorMeta) boot.getItemMeta();
-						metattt.setColor(Color.BLUE);
-						boot.setItemMeta(metattt);
-						guy.getInventory().setBoots(boot);
+						arm.prepareArmor();
+						guy.getInventory().setArmorContents(arm.bluearmor);
 						
 						guy.updateInventory();
 					}
