@@ -365,7 +365,7 @@ public class storeCode {
 		
 		if(a.equalsIgnoreCase("5")){
 			if(plugin.getConfig().contains(name)){
-				if(plugin.getConfig().getInt(name) >= 500){
+				if(plugin.getConfig().getInt(name) >= 950){
 					
 					Potion potion = new Potion(PotionType.INSTANT_HEAL);
 					potion.splash();
@@ -373,7 +373,7 @@ public class storeCode {
 					p.getInventory().addItem(potions);
 					p.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GREEN+"Enjoy your purchase!");
 					int pts = plugin.getConfig().getInt(name);
-					plugin.getConfig().set(name, pts-500);
+					plugin.getConfig().set(name, pts-950);
 					plugin.saveConfig();
 				}else{
 					p.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"You don't have enough points!");

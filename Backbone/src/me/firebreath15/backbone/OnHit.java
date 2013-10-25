@@ -1351,9 +1351,12 @@ public class OnHit
           } else {
             e.setCancelled(true);
           }
-      }
-      else {
-        e.setCancelled(true);
+      }else{
+    	  if ((this.plugin.getConfig().contains("players1." + vn)) || (this.plugin.getConfig().contains("players2." + vn)) || (this.plugin.getConfig().contains("players3." + vn)) || (this.plugin.getConfig().contains("players4." + vn)) || (this.plugin.getConfig().contains("players5." + vn))) {
+    		  //if this is true, then the player wasn't holding a diamond sword in the beginning and therefore the event must
+    		  //be cancelled.
+    		  e.setCancelled(true);
+    	  }
       }
     }
   }
