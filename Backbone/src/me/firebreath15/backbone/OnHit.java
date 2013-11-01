@@ -710,7 +710,7 @@ public class OnHit
           {
             Damageable dv = v;
 
-            if (dv.getHealth() >= 5.0D) {
+            if (dv.getHealth() >= 5d) {
               e.setDamage(4d);
             }
             else {
@@ -1034,7 +1034,7 @@ public class OnHit
           if ((this.plugin.getConfig().contains("rplist1." + kn)) || (this.plugin.getConfig().contains("rplist2." + kn)) || (this.plugin.getConfig().contains("rplist3." + kn)) || (this.plugin.getConfig().contains("rplist4." + kn)) || (this.plugin.getConfig().contains("rplist5." + kn)))
           {
             Damageable dv = v;
-            if (dv.getHealth() >= 5.0D) {
+            if (dv.getHealth() >= 5d) {
               e.setDamage(4d);
             }
             else {
