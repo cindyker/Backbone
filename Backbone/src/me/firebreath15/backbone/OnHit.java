@@ -6,6 +6,7 @@ import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.World;
 import org.bukkit.entity.Damageable;
 import org.bukkit.entity.Entity;
@@ -61,7 +62,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist1." + p.getName())) || (this.plugin.getConfig().contains("bplist1." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -123,7 +124,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist2." + p.getName())) || (this.plugin.getConfig().contains("bplist2." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -185,7 +186,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist3." + p.getName())) || (this.plugin.getConfig().contains("bplist3." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -247,7 +248,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist4." + p.getName())) || (this.plugin.getConfig().contains("bplist4." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -309,7 +310,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist5." + p.getName())) || (this.plugin.getConfig().contains("bplist5." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -384,7 +385,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist1." + p.getName())) || (this.plugin.getConfig().contains("bplist1." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -446,7 +447,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist2." + p.getName())) || (this.plugin.getConfig().contains("bplist2." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -508,7 +509,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist3." + p.getName())) || (this.plugin.getConfig().contains("bplist3." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -570,7 +571,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist4." + p.getName())) || (this.plugin.getConfig().contains("bplist4." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -632,7 +633,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist5." + p.getName())) || (this.plugin.getConfig().contains("bplist5." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -722,7 +723,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist1." + p.getName())) || (this.plugin.getConfig().contains("bplist1." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -784,7 +785,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist2." + p.getName())) || (this.plugin.getConfig().contains("bplist2." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -846,7 +847,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist3." + p.getName())) || (this.plugin.getConfig().contains("bplist3." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -908,7 +909,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist4." + p.getName())) || (this.plugin.getConfig().contains("bplist4." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -970,7 +971,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist5." + p.getName())) || (this.plugin.getConfig().contains("bplist5." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.BLUE + "Blue"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -1046,7 +1047,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist1." + p.getName())) || (this.plugin.getConfig().contains("bplist1." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -1108,7 +1109,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist2." + p.getName())) || (this.plugin.getConfig().contains("bplist2." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -1170,7 +1171,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist3." + p.getName())) || (this.plugin.getConfig().contains("bplist3." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -1232,7 +1233,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist4." + p.getName())) || (this.plugin.getConfig().contains("bplist4." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 
@@ -1294,7 +1295,7 @@ public class OnHit
                   if ((this.plugin.getConfig().contains("rplist5." + p.getName())) || (this.plugin.getConfig().contains("bplist5." + p.getName()))) {
                     this.api.setScoreboard(p);
                     int sc = this.api.getScores(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"));
-                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1);
+                    this.api.setScore(Bukkit.getOfflinePlayer(ChatColor.RED + "Red"), sc + 1); p.playSound(p.getLocation(), Sound.ORB_PICKUP, 10, 10);
                   }
                 }
 

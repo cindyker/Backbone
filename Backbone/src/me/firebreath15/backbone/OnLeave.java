@@ -6,7 +6,10 @@
 
 package me.firebreath15.backbone;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -41,6 +44,13 @@ main plugin;
 			plugin.getConfig().set("rplayers1",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		if(plugin.getConfig().contains("bplist1."+name)){
 			//if they were on the blue team
@@ -50,6 +60,13 @@ main plugin;
 			plugin.getConfig().set("bplayers1",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		
 		if(plugin.getConfig().contains("rplist2."+name)){
@@ -60,6 +77,13 @@ main plugin;
 			plugin.getConfig().set("rplayers2",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		if(plugin.getConfig().contains("bplist2."+name)){
 			//if they were on the blue team
@@ -69,6 +93,13 @@ main plugin;
 			plugin.getConfig().set("bplayers2",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		
 		if(plugin.getConfig().contains("rplist3."+name)){
@@ -79,6 +110,13 @@ main plugin;
 			plugin.getConfig().set("rplayers3",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		if(plugin.getConfig().contains("bplist3."+name)){
 			//if they were on the blue team
@@ -88,6 +126,13 @@ main plugin;
 			plugin.getConfig().set("bplayers3",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		
 		if(plugin.getConfig().contains("rplist4."+name)){
@@ -98,6 +143,13 @@ main plugin;
 			plugin.getConfig().set("rplayers4",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		if(plugin.getConfig().contains("bplist4."+name)){
 			//if they were on the blue team
@@ -107,6 +159,13 @@ main plugin;
 			plugin.getConfig().set("bplayers4",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		
 		if(plugin.getConfig().contains("rplist5."+name)){
@@ -117,6 +176,13 @@ main plugin;
 			plugin.getConfig().set("rplayers5",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		if(plugin.getConfig().contains("bplist5."+name)){
 			//if they were on the blue team
@@ -126,6 +192,13 @@ main plugin;
 			plugin.getConfig().set("bplayers5",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
     }
     
@@ -142,6 +215,13 @@ main plugin;
 			plugin.getConfig().set("rplayers1",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		if(plugin.getConfig().contains("bplist1."+name)){
 			//if they were on the blue team
@@ -151,6 +231,13 @@ main plugin;
 			plugin.getConfig().set("bplayers1",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		
 		if(plugin.getConfig().contains("rplist2."+name)){
@@ -161,6 +248,13 @@ main plugin;
 			plugin.getConfig().set("rplayers2",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		if(plugin.getConfig().contains("bplist2."+name)){
 			//if they were on the blue team
@@ -170,6 +264,13 @@ main plugin;
 			plugin.getConfig().set("bplayers2",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		
 		if(plugin.getConfig().contains("rplist3."+name)){
@@ -180,6 +281,13 @@ main plugin;
 			plugin.getConfig().set("rplayers3",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		if(plugin.getConfig().contains("bplist3."+name)){
 			//if they were on the blue team
@@ -189,6 +297,13 @@ main plugin;
 			plugin.getConfig().set("bplayers3",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		
 		if(plugin.getConfig().contains("rplist4."+name)){
@@ -199,6 +314,13 @@ main plugin;
 			plugin.getConfig().set("rplayers4",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		if(plugin.getConfig().contains("bplist4."+name)){
 			//if they were on the blue team
@@ -208,6 +330,13 @@ main plugin;
 			plugin.getConfig().set("bplayers4",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		
 		if(plugin.getConfig().contains("rplist5."+name)){
@@ -218,6 +347,13 @@ main plugin;
 			plugin.getConfig().set("rplayers5",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 		if(plugin.getConfig().contains("bplist5."+name)){
 			//if they were on the blue team
@@ -227,6 +363,13 @@ main plugin;
 			plugin.getConfig().set("bplayers5",np-1);
 			plugin.saveConfig();
 			p.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+name+" left the game!");
+			double x = plugin.getConfig().getDouble("spawn.x");
+			double y = plugin.getConfig().getDouble("spawn.y");
+			double z = plugin.getConfig().getDouble("spawn.z");
+			String wn = plugin.getConfig().getString("spawn.world");
+			World w = Bukkit.getServer().getWorld(wn);
+			Location l = new Location(w,x,y,z);
+			p.teleport(l);
 		}
 	}
 	

@@ -169,7 +169,7 @@ public class main extends JavaPlugin{
 					}
 				}
 				
-				if(args.length==2){
+				if(args.length==2){					
 					if(args[0].equalsIgnoreCase("bspawn") || args[0].equalsIgnoreCase("rspawn") || args[0].equalsIgnoreCase("join") || args[0].equalsIgnoreCase("store") || args[0].equalsIgnoreCase("setreload")){
 						if(args[0].equalsIgnoreCase("bspawn")){
 							if(sender.hasPermission("backbone.bspawn")){
@@ -332,6 +332,8 @@ public class main extends JavaPlugin{
 								sc.goShopping((Player)sender, args[1]);
 							}
 						}
+						
+						
 						if(args[0].equalsIgnoreCase("join")){
 							Player p = (Player)sender;							
 							cc.joinGame((Player)sender, args[1]);
