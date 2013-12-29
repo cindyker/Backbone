@@ -7,5 +7,6 @@
 			<attribute name="javadoc_location" value="http://jd.bukkit.org/rb/apidocs"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Haden W/Desktop/java stuff/TagAPI.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
