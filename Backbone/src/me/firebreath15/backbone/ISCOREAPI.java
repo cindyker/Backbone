@@ -9,6 +9,12 @@ import org.bukkit.scoreboard.Score;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 
+/* ISCOREAPI by Firebreath15 v1.5
+ * 
+ * Written for private use
+ */
+
+
 public class ISCOREAPI
 {
   Scoreboard board;
@@ -33,7 +39,9 @@ public class ISCOREAPI
   }
 
   public void removeObjective(String obj) {
-    this.board.getObjective(obj).unregister();
+	  if(board.getObjective(obj)!=null){
+		  this.board.getObjective(obj).unregister();
+	  }
   }
 
   public void createTeam(String name) {
@@ -74,7 +82,7 @@ public class ISCOREAPI
   }
 
   public void removePlayerScoreboard(Player p) {
-    p.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
-    p.getScoreboard().clearSlot(DisplaySlot.SIDEBAR);
+	  //MUST set this to player's scoreboard first!
+      board.getObjective(DisplaySlot.SIDEBAR).unregister();
   }
 }
