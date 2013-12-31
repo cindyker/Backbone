@@ -1,45 +1,29 @@
 name: Backbone
-version: 7.4 beta
+version: 7.5.1
+author: Firebreath15
 main: me.firebreath15.backbone.main
+softdepend: [TagAPI]
 commands:
   bb:
-    description: Backbone
+    description: Backbone by Firebreath15
     usage: /bb
     permission: backbone.use
-    permission-message: No Permission!
+    permission-message: You don't have permission!
+  backbone:
+    description: Backbone by Firebreath15
+    usage: /backbone
+    permission: backbone.use
+    permission-message: You don't have permission!
 permissions:
   backbone.use:
-    default: false
-  backbone.store:
-    default: false
-  backbone.rspawn:
-    default: false
-  backbone.bspawn:
-    default: false
-  backbone.setreload:
-    default: false
+    default: true
   backbone.setend:
-    default: false
-  backbone.place:
-    default: false
-  backbone.break:
-    default: false
-  backbone.sign:
-    default: false
-  backbone.player:
     default: op
-    children:
-      backbone.use: true
-      backbone.store: true
-  backbone.admin:
+  backbone.bspawn:
     default: op
-    children:
-      backbone.use: true
-      backbone.store: true
-      backbone.rspawn: true
-      backbone.bspawn: true
-      backbone.setreload: true
-      backbone.setend: true
-      backbone.place: true
-      backbone.break: true
-      backbone.sign: true
+  backbone.rspawn:
+    default: op
+  backbone.setreload:
+    default: op
+  backbone.setlobby:
+    default: op

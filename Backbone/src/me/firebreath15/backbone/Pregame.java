@@ -10,14 +10,16 @@ public class Pregame extends BukkitRunnable{
 	main plugin;
 	String a;
 	Player p;
-	Pregame(main c, String ar, Player pl){
+	int q;
+	Pregame(main c, String ar, Player pl, int queue){
 		plugin=c;
 		a=ar;
 		p=pl;
+		q=queue;
 	}
 	
 	public void run(){
-		if(plugin.getConfig().getInt("queue"+a) == 2){ //there is 1 other player in the game, so we're the second. START COUNTDOWN!
+		if(q == 2){ //there is 1 other player in the game, so we're the second. START COUNTDOWN!
 			//start StartGame
 			@SuppressWarnings("unused")
 			BukkitTask start = new Startgame(plugin).runTaskLater(plugin, 400);
@@ -25,11 +27,11 @@ public class Pregame extends BukkitRunnable{
 			//queue player in StartGame array
 			Startgame.map.put(p.getName(), a);
 		}
-		if(plugin.getConfig().getInt("queue"+a) >= 3){ //there are other players playing and the countdown has started. 
+		if(q >= 3){ //there are other players playing and the countdown has started. 
 			//queue player in StartGame array
 			Startgame.map.put(p.getName(), a);
 		}
-		if(plugin.getConfig().getInt("queue"+a) == 1){ //we're first. queue us! 
+		if(q == 1){ //we're first. queue us! 
 			//queue player in StartGame array
 			Startgame.map.put(p.getName(), a);
 		}

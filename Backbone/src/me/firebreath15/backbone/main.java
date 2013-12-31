@@ -154,8 +154,9 @@ public class main extends JavaPlugin{
 											api.refreshPlayerScoreboard(p);
 											
 											Bukkit.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+p.getName()+ChatColor.GOLD+" joined arena "+a+"!");
+											int q = this.getConfig().getInt("queue"+a);
 											@SuppressWarnings("unused")
-											BukkitTask pre = new Pregame(this, a, p).runTaskLater(this, 40);
+											BukkitTask pre = new Pregame(this, a, p, q).runTaskLater(this, 20);
 										}else{
 											p.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"The game is not completely setup!");
 										}

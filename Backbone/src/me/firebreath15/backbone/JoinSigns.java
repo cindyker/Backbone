@@ -95,8 +95,9 @@ public class JoinSigns implements Listener{
 								api.refreshPlayerScoreboard(p);
 								
 								Bukkit.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+p.getName()+ChatColor.GOLD+" joined arena "+a+"!");
+								int q = plugin.getConfig().getInt("queue"+a);
 								@SuppressWarnings("unused")
-								BukkitTask pre = new Pregame(plugin, a, p).runTaskLater(plugin, 20);
+								BukkitTask pre = new Pregame(plugin, a, p, q).runTaskLater(plugin, 20);
 							}else{
 								p.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"The game lobby has not been setup!");
 							}
