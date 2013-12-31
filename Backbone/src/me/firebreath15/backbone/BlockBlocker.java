@@ -38,7 +38,9 @@ public class BlockBlocker implements Listener{
 	public void stopCommands(PlayerCommandPreprocessEvent e){
 		Player p = e.getPlayer();
 		if(plugin.getConfig().contains("players1."+p.getName()) || plugin.getConfig().contains("players2."+p.getName()) || plugin.getConfig().contains("players3."+p.getName()) || plugin.getConfig().contains("players4."+p.getName()) || plugin.getConfig().contains("players5."+p.getName())){
-			if(!(e.getMessage().equalsIgnoreCase("/bb") || e.getMessage().equalsIgnoreCase("/backbone"))){
+			if(e.getMessage().contains("bb") || e.getMessage().contains("backbone")){
+				//do nothing
+			}else{
 				e.setCancelled(true);
 				p.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"You must leave before sending commands!");
 			}

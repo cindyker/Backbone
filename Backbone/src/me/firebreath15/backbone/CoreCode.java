@@ -162,7 +162,7 @@ public class CoreCode {
 		
 	    ISCOREAPI api = new ISCOREAPI();
 	    api.setScoreboard(p);
-	    api.obj.setDisplaySlot(null);
+	    //api.obj.setDisplaySlot(null);    REMOVED BECAUSE CAUSED NULLPOINTERS
 	    api.removePlayerFromTeam("Player", p);
 		api.removeTeam("Player");
 		api.removeObjective("Arena_1");
@@ -176,7 +176,7 @@ public class CoreCode {
         plugin.iapi.restorePlayerArmor(p.getName());
 	    
 	    PvpEngine.pal.remove(p.getName());
-        
+	    
 		if(plugin.getConfig().contains("spawn.x")){
 			Location spawn = new Location(Bukkit.getServer().getWorld(plugin.getConfig().getString("spawn.world")), plugin.getConfig().getDouble("spawn.x"), plugin.getConfig().getDouble("spawn.y"), plugin.getConfig().getDouble("spawn.z"));
 			p.teleport(spawn);
