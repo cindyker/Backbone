@@ -103,11 +103,18 @@ public class main extends JavaPlugin{
 								}
 						}
 		/*Leave*/		if(args[0].equalsIgnoreCase("leave")){
-							if(this.getConfig().contains("players1."+p.getName()) || this.getConfig().contains("players2."+p.getName()) || this.getConfig().contains("players3."+p.getName()) || this.getConfig().contains("players4."+p.getName()) || this.getConfig().contains("players5."+p.getName())){
-								cc.removeAndTeleport(p);
-								p.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"Thanks for playing!");
-								Bukkit.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+p.getName()+" left the game.");
+							if(this.getConfig().contains("players1."+p.getName()) || this.getConfig().contains("players2."+p.getName()) || this.getConfig().contains("players3."+p.getName()) || this.getConfig().contains("players4."+p.getName()) || this.getConfig().contains("players5."+p.getName()) || Startgame.map.containsKey(p.getName())){
+								//if the player is in an arena, or if they are waiting, lets remove them.
+								if(this.getConfig().contains("players1."+p.getName()) || this.getConfig().contains("players2."+p.getName()) || this.getConfig().contains("players3."+p.getName()) || this.getConfig().contains("players4."+p.getName()) || this.getConfig().contains("players5."+p.getName())){
+									cc.removeAndTeleport(p);
+									p.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+"Thanks for playing!");
+									Bukkit.getServer().broadcastMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.GOLD+p.getName()+" left the game.");
+								}
 								
+								if(Startgame.map.containsKey(p.getName())){
+									Startgame.map.remove(p.getName());
+									cc.removeAndTeleport(p);
+								}
 							}else{
 								p.sendMessage(ChatColor.DARK_PURPLE+"[Backbone] "+ChatColor.RED+"You aren't playing!");
 							}

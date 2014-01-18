@@ -30,8 +30,10 @@ public class INVAPI {
 	}
 	
 	public void restorePlayerInventory(String name){
-		Bukkit.getPlayerExact(name).getInventory().setContents(plinv.get(name));
-		plinv.remove(name);
+		if(plinv.containsKey(name)){
+			Bukkit.getPlayerExact(name).getInventory().setContents(plinv.get(name));
+			plinv.remove(name);
+		}
 	}
 	
 	public void restorePlayerArmor(String name){

@@ -11,7 +11,7 @@ import org.bukkit.scoreboard.Team;
 
 /* ISCOREAPI by Firebreath15 v1.5
  * 
- * Written for private use
+ * Written for private use. Do not duplicate or republish.
  */
 
 
@@ -70,7 +70,11 @@ public class ISCOREAPI
   }
 
   public void removePlayerFromTeam(String team, Player p) {
-    this.board.getTeam(team).removePlayer(p);
+	  if(this.board.getTeam(team)!=null){
+		  if(this.board.getTeam(team).hasPlayer(p)){
+			  this.board.getTeam(team).removePlayer(p);
+		  }
+	  }
   }
 
   public void refreshPlayerScoreboard(Player p) {
